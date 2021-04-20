@@ -1,0 +1,19 @@
+{
+  "name": "filecoin-interactive-store-a-cat",
+  "version": "1.0.0",
+  "description": "Store a cat picture on Filecoin (Ganache)",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "Jim Pick (@jimpick)",
+  "license": "MIT/Apache-2 (Permissive License Stack)",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

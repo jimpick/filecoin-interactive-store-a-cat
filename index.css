@@ -1,0 +1,8 @@
+body {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  font-size: 14px;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, sans-serif;
+}
