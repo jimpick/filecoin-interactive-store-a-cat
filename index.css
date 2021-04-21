@@ -12,6 +12,9 @@ body {
   margin-bottom: 10vh;
 }
 
+a:active {
+  color: cyan;
+}
 a:visited {
   color: green;
 }

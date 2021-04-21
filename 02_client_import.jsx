@@ -33,7 +33,11 @@ const LazyAnimation = ({ threshold, height, children }) => {
         </motion.div>
       ) : (
         <div style={{ minHeight: height }}>
-          {false && <span>Placeholder {height} {threshold} {JSON.stringify(inView)}</span>}
+          {false && (
+            <span>
+              Placeholder {height} {threshold} {JSON.stringify(inView)}
+            </span>
+          )}
         </div>
       )}
     </div>
@@ -86,7 +90,12 @@ function HandsDown ({ num }) {
 
 export default function ClientImport () {
   const history = useHistory()
-  const [catNumber, setCatNumber] = useState(randCat())
+  const [catNumber, setCatNumber] = useState()
+
+  function getRandomCat (evt) {
+    setCatNumber(randCat())
+    evt.preventDefault()
+  }
 
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
@@ -104,33 +113,57 @@ export default function ClientImport () {
       </LazyAnimation>
       <LazyAnimation threshold={0.99} height={'30vh'}>
         <div>
-          <div>
-            First we'll need a cat picture to upload.
-            <br />
-            <br />
-            We've got a random cat for you here: <br />
-            <br />
-            <img
-              style={{ width: '60%', maxHeight: '50vh' }}
-              src={'cats/cat.' + catNumber + '.jpg'}
-            ></img>
-            <br />
-            Cat #{catNumber} [
-            <a href='https://www.kaggle.com/tongpython/cat-and-dog'>Source</a>]
-          </div>
-          <button
-            style={{ marginTop: '1.5rem', fontSize: '300%' }}
-            onClick={() => setCatNumber(randCat())}
-          >
-            Pick a different cat
-          </button>
+          First we'll need a cat picture to upload.
+          <br />
+          <br />
+          {catNumber ? (
+            <div>
+              <div>
+                We've got a random cat for you here: <br />
+                <br />
+                <img
+                  style={{
+                    maxWidth: '70%',
+                    maxHeight: '50vh',
+                    width: 'auto',
+                    height: 'auto',
+                    display: 'block',
+                    margin: '0 auto'
+                  }}
+                  src={'cats/cat.' + catNumber + '.jpg'}
+                  onClick={getRandomCat}
+                ></img>
+                <br />
+                Cat #{catNumber} [
+                <a href='https://www.kaggle.com/tongpython/cat-and-dog'>
+                  Source
+                </a>
+                ]
+              </div>
+              <div style={{ marginTop: '0.5rem' }}>
+                <a href='#' onClick={getRandomCat}>
+                  Don't like your cat? Pick a different cat.
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <button
+                style={{ marginTop: '1.5rem', fontSize: '300%' }}
+                onClick={getRandomCat}
+              >
+                Pick a random cat
+              </button>
+            </div>
+          )}
         </div>
       </LazyAnimation>
-      <LazyAnimation threshold={0.99} height={'50vh'}>
-        <HandsDown num={3} />
-      </LazyAnimation>
-      <div style={{minHeight: '20vh'}}></div>
-
+      {catNumber && (
+        <LazyAnimation threshold={0} height={'50vh'}>
+          <HandsDown num={3} />
+        </LazyAnimation>
+      )}
+      <div style={{ minHeight: '20vh' }}></div>
     </div>
   )
 }
