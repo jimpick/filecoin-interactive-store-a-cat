@@ -8,6 +8,10 @@ body {
 }
 
 .spaced {
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+a:visited {
+  color: green;
 }
