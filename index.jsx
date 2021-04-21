@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 
 import Welcome from './01_welcome.jsx'
+import ClientImport from './02_client_import.jsx'
 
 function Nav () {
   const location = useLocation()
@@ -18,7 +19,7 @@ function Nav () {
   return (
     <nav>
       <Link to='/'>Back to start</Link>
-      <pre>{JSON.stringify(location)}</pre>
+      {false && <pre>{JSON.stringify(location)}</pre>}
     </nav>
   )
 }
@@ -28,6 +29,9 @@ export default function App () {
     <Router>
       <Nav />
       <Switch>
+        <Route path='/client-import'>
+          <ClientImport />
+        </Route>
         <Route path='/about'>
           <About />
         </Route>

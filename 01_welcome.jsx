@@ -17,7 +17,7 @@ export default function Welcome () {
 
       <button style={{ marginTop: '1rem', fontSize: '300%' }} onClick={() => {
         console.log('Click!')
-        history.push('/about')
+        history.push('/client-import')
       }}>Let's go!</button>
     </div>
   )
