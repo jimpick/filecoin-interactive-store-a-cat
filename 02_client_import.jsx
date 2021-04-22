@@ -146,7 +146,7 @@ export default function ClientImport () {
           ) : (
             <div>
               <button
-                style={{ marginTop: '1.5rem', fontSize: '300%' }}
+                style={{ marginTop: '1.5rem', fontSize: '200%' }}
                 onClick={getRandomCat}
               >
                 Pick a random cat
@@ -288,9 +288,9 @@ export default function ClientImport () {
             <p>
               There is active development to unbundle the "storage client" and
               "retrieval client" code from Lotus so it can be run separately
-              (aka. "Lotus Lite" mode) or be used with other Filecoin node
-              implementations. This work is ongoing and you can ask about it in
-              developer channels.
+              attached to a hosted gateway service (aka. "Lotus Lite" mode) or
+              be used with other Filecoin node implementations. This work is
+              ongoing and you can ask about it in developer channels.
             </p>
           </LazyAnimation>
           <LazyAnimation threshold={0.3} height={'1vh'}>

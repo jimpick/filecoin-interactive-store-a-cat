@@ -10,13 +10,12 @@ export default function Welcome () {
 
       <h1 style={{ fontSize: '300%' }}>Store a cat</h1>
 
-      <div style={{ fontSize: '500%' }}>
+      <div style={{ fontSize: '300%' }}>
         <span style={{ verticalAlign: 'top' }}>🐈 ⇨</span>{' '}
         <img src='filecoin-logo.svg' style={{ height: '1.3em' }} />
       </div>
 
-      <button style={{ marginTop: '1rem', fontSize: '300%' }} onClick={() => {
-        console.log('Click!')
+      <button style={{ marginTop: '3rem', fontSize: '200%' }} onClick={() => {
         history.push('/client-import')
       }}>Let's go!</button>
     </div>
