@@ -1,10 +1,12 @@
 body {
   --color-background: #000000;
   --color-text: #ffffff;
-  font-size: 14px;
+  font-size: 24px;
   background: var(--color-background);
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, sans-serif;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .spaced {

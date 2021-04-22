@@ -123,12 +123,9 @@ export default function ClientImport () {
                 <br />
                 <img
                   style={{
-                    maxWidth: '70%',
+                    width: '70%',
                     maxHeight: '50vh',
-                    width: 'auto',
-                    height: 'auto',
-                    display: 'block',
-                    margin: '0 auto'
+                    objectFit: 'contain'
                   }}
                   src={'cats/cat.' + catNumber + '.jpg'}
                   onClick={getRandomCat}
@@ -159,9 +156,182 @@ export default function ClientImport () {
         </div>
       </LazyAnimation>
       {catNumber && (
-        <LazyAnimation threshold={0} height={'50vh'}>
-          <HandsDown num={3} />
-        </LazyAnimation>
+        <>
+          <LazyAnimation threshold={0}>
+            <HandsDown num={1} />
+          </LazyAnimation>
+          <LazyAnimation threshold={0}>
+            ... now, let's get that picture onto Filecoin!
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'50vh'}>
+            <HandsDown num={3} />
+          </LazyAnimation>
+          <LazyAnimation threshold={0}>
+            For this simple demo, we're not going to store on the "mainnet"
+            Filecoin network, as that requires a three things we don't currently
+            have...
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'10vh'}>
+            <div className='spaced' style={{ fontSize: '400%' }}>
+              🥇
+            </div>
+          </LazyAnimation>
+          <LazyAnimation>
+            <p>
+              First, in order to talk to the network from a web page, we need to
+              connect to a machine that is participating in the Filecoin
+              blockchain.
+            </p>
+          </LazyAnimation>
+          <LazyAnimation>
+            <img
+              alt='Lotus Logo'
+              src='./lotus_logo_h.svg'
+              style={{
+                background: 'white',
+                padding: '1rem',
+                width: '50%'
+              }}
+            ></img>
+            <p>
+              The best supported and most complete solution is to run your own
+              node on the Filecoin network using open source software such as{' '}
+              <a
+                href='https://github.com/filecoin-project/lotus'
+                target='_blank'
+              >
+                Lotus
+              </a>{' '}
+              (the reference Filecoin node implementation). Typically you would
+              run this on a capable Linux server as it needs a lot of memory and
+              disk to continuously sync and validate all of the live blockchain
+              transactions that are happening on the Filecoin network. Lotus
+              also includes software for a "storage client" to enable you to
+              create deals and upload files to the network, and a "retrieval
+              client" for getting the files back later.
+            </p>
+          </LazyAnimation>
+          <LazyAnimation>
+            <p>
+              Most applications would prefer to connect to an API endpoint from
+              a hosted service provider. There are options available, but they
+              all have limitations:
+            </p>
+            <p>
+              <img
+                src='glif.svg'
+                width='15%'
+                style={{ float: 'left', padding: '0.5rem', margin: '0.5rem' }}
+              ></img>
+              There are "public" API endpoints available (eg. "
+              <a
+                href='https://docs.filecoin.io/build/hosted-lotus/'
+                target='_blank'
+              >
+                Glif Nodes
+              </a>
+              " that have limited functionality that applications can use
+              without authentication. These services are ideal for applications
+              that only need to query balances and transfer funds between
+              accounts. Typically public API endpoints do not support "storage
+              client" and "retrieval client" functions, as Filecoin is commonly
+              used to store huge amounts of data, and the bandwidth costs would
+              be astronomical for a free service.
+            </p>
+            <p>
+              <img
+                src='infura.svg'
+                width='15%'
+                style={{
+                  background: 'rgb(255,107,74)',
+                  float: 'left',
+                  padding: '0.5rem',
+                  margin: '0.5rem'
+                }}
+              ></img>
+              Private hosted API endpoints are also available from providers
+              such as{' '}
+              <a
+                href='https://blog.infura.io/introducing-infura-support-for-filecoin-developers/'
+                target='_blank'
+              >
+                Infura
+              </a>
+              . Currently, the{' '}
+              <a
+                href='https://infura.io/docs/filecoin#tag/Client'
+                target='_blank'
+              >
+                Infura Filecoin API
+              </a>{' '}
+              does not yet support "storage client" or "retrieval client"
+              functionality.
+            </p>
+            <p>
+              <img
+                src='textile.svg'
+                width='15%'
+                style={{ float: 'left', padding: '0.5rem', margin: '0.5rem' }}
+              ></img>
+              Some hosting providers provide non-raw access to the Filecoin
+              network via their own value-added APIs which add additional layers
+              of software and functionality. A good example of this model would
+              be{' '}
+              <a
+                href='https://docs.filecoin.io/build/hosted-powergate/'
+                target='_blank'
+              >
+                Hosted Powergate
+              </a>{' '}
+              (from Textile).
+            </p>
+            <p>
+              There is active development to unbundle the "storage client" and
+              "retrieval client" code from Lotus so it can be run separately
+              (aka. "Lotus Lite" mode) or be used with other Filecoin node
+              implementations. This work is ongoing and you can ask about it in
+              developer channels.
+            </p>
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'1vh'}>
+            ...
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'10vh'}>
+            <p>
+              So, for now, we're going to connect to a "simulated" version of
+              the Filecoin network ... more on that later!
+            </p>
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'50vh'}>
+            <HandsDown num={3} />
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'10vh'}>
+            <div className='spaced' style={{ fontSize: '400%' }}>
+              🥈
+            </div>
+          </LazyAnimation>
+          <LazyAnimation>
+            <p>
+              Second, in order to demonstrate file storage on the live "mainnet"
+              Filecoin network, we need funds!
+            </p>
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'50vh'}>
+            <HandsDown num={3} />
+          </LazyAnimation>
+          <LazyAnimation threshold={0.3} height={'10vh'}>
+            <div className='spaced' style={{ fontSize: '400%' }}>
+              🥉
+            </div>
+          </LazyAnimation>
+          <LazyAnimation>
+            <p>
+              Third, in order to demonstrate file storage on the live "mainnet"
+              Filecoin network, we need to pick a miner to make a deal with to
+              store our cat picture.
+            </p>
+          </LazyAnimation>
+        </>
       )}
       <div style={{ minHeight: '20vh' }}></div>
     </div>
