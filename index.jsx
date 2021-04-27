@@ -17,8 +17,18 @@ function Nav () {
     return null
   }
   return (
-    <nav>
-      <Link to='/'>Back to start</Link>
+    <nav style={{ marginTop: '0.5rem' }}>
+      <Link
+        to='/'
+        alt='Back to start'
+        style={{
+          textDecoration: 'none',
+          marginLeft: '-1.5rem',
+          fontSize: '200%'
+        }}
+      >
+        ◁
+      </Link>
       {false && <pre>{JSON.stringify(location)}</pre>}
     </nav>
   )

@@ -172,7 +172,7 @@ export default function ClientImport () {
             have...
           </LazyAnimation>
           <LazyAnimation threshold={0.3} height={'10vh'}>
-            <div className='spaced' style={{ fontSize: '400%' }}>
+            <div className='spaced' style={{ fontSize: '800%' }}>
               🥇
             </div>
           </LazyAnimation>
@@ -221,7 +221,11 @@ export default function ClientImport () {
               <img
                 src='glif.svg'
                 width='15%'
-                style={{ float: 'left', padding: '0.5rem', margin: '0.5rem' }}
+                style={{
+                  float: 'left',
+                  padding: '0.5rem',
+                  margin: '0.5rem'
+                }}
               ></img>
               There are "public" API endpoints available (eg. "
               <a
@@ -238,7 +242,7 @@ export default function ClientImport () {
               used to store huge amounts of data, and the bandwidth costs would
               be astronomical for a free service.
             </p>
-            <p>
+            <p style={{ clear: 'both' }}>
               <img
                 src='infura.svg'
                 width='15%'
@@ -267,11 +271,15 @@ export default function ClientImport () {
               does not yet support "storage client" or "retrieval client"
               functionality.
             </p>
-            <p>
+            <p style={{ clear: 'both' }}>
               <img
                 src='textile.svg'
                 width='15%'
-                style={{ float: 'left', padding: '0.5rem', margin: '0.5rem' }}
+                style={{
+                  float: 'left',
+                  padding: '0.5rem',
+                  margin: '0.5rem'
+                }}
               ></img>
               Some hosting providers provide non-raw access to the Filecoin
               network via their own value-added APIs which add additional layers
@@ -306,7 +314,7 @@ export default function ClientImport () {
             <HandsDown num={3} />
           </LazyAnimation>
           <LazyAnimation threshold={0.3} height={'10vh'}>
-            <div className='spaced' style={{ fontSize: '400%' }}>
+            <div className='spaced' style={{ fontSize: '800%' }}>
               🥈
             </div>
           </LazyAnimation>
@@ -320,7 +328,7 @@ export default function ClientImport () {
             <HandsDown num={3} />
           </LazyAnimation>
           <LazyAnimation threshold={0.3} height={'10vh'}>
-            <div className='spaced' style={{ fontSize: '400%' }}>
+            <div className='spaced' style={{ fontSize: '800%' }}>
               🥉
             </div>
           </LazyAnimation>
