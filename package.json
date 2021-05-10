@@ -4,7 +4,8 @@
   "description": "Store a cat picture on Filecoin (Ganache)",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "Jim Pick (@jimpick)",

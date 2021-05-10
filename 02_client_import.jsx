@@ -132,7 +132,10 @@ export default function ClientImport () {
                 ></img>
                 <br />
                 Cat #{catNumber} [
-                <a href='https://www.kaggle.com/tongpython/cat-and-dog'>
+                <a
+                  href='https://www.kaggle.com/tongpython/cat-and-dog'
+                  target='_blank'
+                >
                   Source
                 </a>
                 ]
